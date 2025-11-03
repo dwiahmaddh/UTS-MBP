@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Aplikasi Data Diri</title>
+  <link rel="stylesheet" href="style.css" />  
+</head>
+<body>
+  
+  <section id="login-page" class="page active">
+    <h1>Selamat Datang</h1>
+    <p>Di BIO SAYA</p>
+    <img src="foto 1.jpg" alt="logo" class="logo" />
+    <div class="input-group">
+      <input type="text" id="username" placeholder="Email atau Username" />
+      <input type="password" id="password" placeholder="Password" />
+      <button onclick="login()">Login</button>
+    </div>
+  </section>
+
+ 
+  <section id="dashboard-page" class="page">
+    <header>
+      <h2>Dashboard</h2>
+      <span class="notif">🔔</span>
+    </header>
+    <div class="banner">
+      <img src="foto 3.jpg" alt="banner" />
+    </div>
+    <h3 id="greeting">Halo, User</h3>
+    <div class="menu">
+  <div onclick="goToProfile()">👤 Profil</div>
+  <div onclick="goToData()">📋 Data</div>
+    <div onclick="goToSettings()">⚙️ Pengaturan</div>
+</div>
+
+  </section>
+
+  
+  <section id="profile-page" class="page">
+    <img src="foto 2.webp" alt="avatar" class="avatar" />
+    <h3 id="name">Dwi Ahmad Diyaul Haq</h3>
+    <p>NIM: 23670030</p>
+    <p>Email: dwiahmaddh@gmail.com</p>
+    <div class="info">
+      <span>Prodi: Informatika</span> | <span>Semester: 5</span>
+    </div>
+    <button onclick="backToDashboard()">Kembali</button>
+  </section>
+  <section id="data-page" class="page">
+  <h2>Data Diri</h2>
+   <h3 id="name">Dwi Ahmad Diyaul Haq</h3>
+    <p>Hobi      : Main Game / Sepak Bola</p>
+    <p>Pekerjaan : Cuma Kuli Biasa</p>
+    <p>Mau Lebih Kepo Lagi?</p>
+  <p>Ayoo.. Kunjungi profil Instagram saya melalui tombol di bawah ini:</p>
+  <button onclick="window.open('https://www.instagram.com/ahmad.dyhq_/', '_blank')">
+    📸 Buka Instagram
+  </button>
+  <br><br>
+  <button onclick="backToDashboard()">Kembali</button>
+</section>
+
+<!-- Halaman Pengaturan -->
+<section id="settings-page" class="page">
+  <h2>Pengaturan</h2>
+  <p>Bingung dikasih apa,yaudah foto saja.</p>
+
+  <!-- Galeri foto (contoh 5 gambar dummy) -->
+<div class="gallery">
+  <img src="foto 4.jpg" alt="Foto 4" onclick="openImage(this.src)" />
+  <img src="foto5.jpg" alt="Foto 5" onclick="openImage(this.src)" />
+  <img src="foto 6.jpg" alt="Foto 6" onclick="openImage(this.src)" />
+  <img src="foto 7.jpg" alt="Foto 7" onclick="openImage(this.src)" />
+</div>
+
+  <button onclick="backToDashboard()">Kembali ke Dashboard</button>
+   <div class="setting-buttons">
+    <button onclick="backToDashboard()">🏠 Kembali ke Menu</button>
+    <button onclick="goToProfile()">👤 Profil</button>
+    <button onclick="goToData()">📋 Data</button>
+  </div>
+</section>
+
+<!-- Pop-up tampilan gambar -->
+<div id="popup" class="popup" onclick="closeImage()">
+  <img id="popup-img" src="" alt="Preview" />
+</div>
+
+  <script src="script.js"></script> 
+</body>
+</html>
